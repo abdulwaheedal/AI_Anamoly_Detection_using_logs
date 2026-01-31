@@ -36,8 +36,8 @@ An unsupervised machine learning system for detecting anomalies in HDFS logs usi
 
 1. **Clone this repository:**
 ```bash
-   git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
-   cd YOUR_REPO_NAME
+   git clone https://github.com/abdulwaheedal/AI_Anamoly_Detection_using_logs.git
+   cd AI_Anamoly_Detection_using_logs
 ```
 
 2. **Install dependencies:**
@@ -117,7 +117,7 @@ All of these will be created automatically when you run the notebook!
 
 ## 📧 Contact
 
-For questions, please open an issue in this repository.
+For questions, please open an issue in this repository or DM me here[<img src="https://badgen.net" />](https://x.com/faaa1z)
 
 ---
 
