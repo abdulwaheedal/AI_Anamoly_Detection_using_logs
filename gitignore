@@ -1,0 +1,27 @@
+# Jupyter/Colab
+.ipynb_checkpoints/
+__pycache__/
+.config/
+sample_data/
+
+# ALL Data files (users download from external sources)
+*.log
+*.tar.gz
+*.csv
+
+# ALL Output/Result files (users generate by running notebook)
+*.png
+*.txt
+
+# OS files
+.DS_Store
+Thumbs.db
+.idea/
+
+# Python
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/

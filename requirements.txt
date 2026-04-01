@@ -1,3 +1,6 @@
+drain3==0.9.11
+seaborn==0.13.2
+tqdm
 streamlit
 pandas
 numpy
