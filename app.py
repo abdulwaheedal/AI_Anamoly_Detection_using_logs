@@ -12,34 +12,23 @@ st.set_page_config(layout="wide")
 
 st.title("🔍 Real-Time Log Anomaly Detection System")
 
-# ======================
 # Upload Log File
-# ======================
-
 uploaded_file = st.file_uploader(
     "Upload System Log File",
     type=["log", "txt"]
 )
 
-# ======================
 # Parse Logs Automatically
-# ======================
-
 def parse_logs(file):
-
     logs = file.read().decode().splitlines()
-
     config = TemplateMinerConfig()
     miner = TemplateMiner(config=config)
 
     data = []
 
     for i, log in enumerate(logs):
-
         result = miner.add_log_message(log)
-
         template = result["template_mined"]
-
         data.append([
             i,
             len(log),
@@ -55,11 +44,7 @@ def parse_logs(file):
 
     return df
 
-
-# ======================
 # Dashboard
-# ======================
-
 if uploaded_file:
 
     st.success("✅ Log file uploaded")
@@ -70,10 +55,7 @@ if uploaded_file:
     st.subheader("Parsed Features")
     st.dataframe(df.head())
 
-    # ======================
     # Train Model
-    # ======================
-
     X = df[["avg_length", "has_error", "count"]]
 
     scaler = StandardScaler()
@@ -86,10 +68,7 @@ if uploaded_file:
         {1: "Normal", -1: "Anomaly"}
     )
 
-    # ======================
     # PCA Visualization
-    # ======================
-
     pca = PCA(n_components=2)
     components = pca.fit_transform(X_scaled)
 
@@ -110,10 +89,7 @@ if uploaded_file:
 
     st.plotly_chart(fig, use_container_width=True)
 
-    # ======================
     # Live Streaming Detection
-    # ======================
-
     st.subheader("⚡ Live Streaming Anomaly Alerts")
 
     placeholder = st.empty()
